@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indigo Hairline Stripes – INDIG-GROK</title>
+  <style>
+    body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; line-height: 1.6; }
+    header { background: #000; color: #fff; padding: 15px; text-align: center; position: relative; }
+    .logo { position: absolute; top: 10px; left: 20px; }
+    .logo img { max-width: 80px; }
+    
+    .product-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      padding: 20px;
+    }
+
+    /* Left Side: Image Gallery */
+    .product-gallery { flex: 1; min-width: 350px; }
+    .main-image { width: 100%; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+    /* Right Side: Product Details */
+    .product-details { flex: 1; min-width: 350px; }
+    .brand { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: #888; margin-bottom: 10px; }
+    h1 { font-size: 2.2rem; margin: 0 0 15px 0; font-weight: 600; }
+    .price-row { font-size: 1.5rem; margin-bottom: 25px; }
+    .current-price { font-weight: bold; color: #000; }
+    .old-price { text-decoration: line-through; color: #999; margin-left: 10px; font-size: 1.2rem; }
+
+    .selector-label { font-weight: bold; margin-bottom: 10px; display: block; }
+    .size-options { display: flex; gap: 10px; margin-bottom: 30px; }
+    .size-btn {
+      border: 1px solid #ddd;
+      padding: 10px 20px;
+      cursor: pointer;
+      background: #fff;
+      transition: 0.2s;
+    }
+    .size-btn:hover, .size-btn.active { border-color: #000; background: #000; color: #fff; }
+
+    .buy-actions { display: flex; flex-direction: column; gap: 10px; }
+    .add-to-cart {
+      background: #fff; border: 2px solid #000; color: #000;
+      padding: 15px; font-size: 1rem; font-weight: bold; cursor: pointer;
+    }
+    .buy-now {
+      background: #000; border: none; color: #fff;
+      padding: 15px; font-size: 1rem; font-weight: bold; cursor: pointer;
+    }
+    .add-to-cart:hover { background: #f8f8f8; }
+
+    .description-box { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; }
+    
+    @media (max-width: 768px) {
+      .product-container { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></div>
+    INDIG-GROK
+  </header>
+
+  <div class="product-container">
+    <div class="product-gallery">
+      <img src="images/product1.jpg" alt="Indigo Hairline Stripes" class="main-image">
+    </div>
+
+    <div class="product-details">
+      <div class="brand">INDIG-GROK Pakistan</div>
+      <h1>Indigo Hairline Stripes</h1>
+      
+      <div class="price-row">
+        <span class="current-price">Rs 3,490</span>
+        <span class="old-price">Rs 4,490</span>
+      </div>
+
+      <span class="selector-label">Select Size</span>
+      <div class="size-options">
+        <button class="size-btn">S</button>
+        <button class="size-btn active">M</button>
+        <button class="size-btn">L</button>
+        <button class="size-btn">XL</button>
+      </div>
+
+      <div class="buy-actions">
+        <button class="add-to-cart">ADD TO CART</button>
+        <button class="buy-now">BUY IT NOW</button>
+      </div>
+
+      <div class="description-box">
+        <h3>Product Description</h3>
+        <p>A classic hairline stripe pattern in deep indigo. Crafted from 100% premium cotton for a breathable, crisp feel. Perfect for executive wear or smart-casual evenings.</p>
+        <ul>
+            <li>Slim Fit</li>
+            <li>Easy-iron finish</li>
+            <li>Spread collar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
