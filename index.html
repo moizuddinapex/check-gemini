@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INDIG-GROK – Premium Men's Shirts</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      /* Background Image Path Fixed */
+      background: url('images/backgroundimage.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+    }
+    header {
+      background: #000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      position: relative;
+    }
+    /* Logo - Top Left Corner */
+    .logo {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      z-index: 1000;
+    }
+    .logo img {
+      max-width: 120px;
+      height: auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px;
+      /* Semi-transparent background to see the background image */
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    h1 { text-align: center; font-size: 2.4rem; margin-bottom: 10px; }
+    .description { text-align: center; font-size: 1.1rem; color: #444; max-width: 800px; margin: 0 auto 40px; }
+    
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .product-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .product-card:hover { transform: translateY(-5px); }
+    .product-image {
+      height: 380px;
+      background: #f0f0f0;
+    }
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .brand-label {
+      background: #000;
+      color: white;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      display: inline-block;
+      margin: 15px 0 5px;
+    }
+    .product-info { padding: 15px; }
+    .price { font-size: 1.4rem; font-weight: bold; color: #4b0082; }
+    .original { text-decoration: line-through; color: #777; margin-left: 10px; font-size: 0.9rem; }
+    
+    .add-btn {
+      background: #000;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: rgba(0,0,0,0.9);
+      color: white;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="images/logo.png" alt="INDIG-GROK Logo">
+  </div>
+
+  <header>INDIG-GROK</header>
+
+  <div class="container">
+    <h1>Premium Men's Shirts</h1>
+    <p class="description">Elevate your wardrobe with refined pieces blending timeless elegance with everyday comfort.</p>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/product1.jpg" alt="Indigo Hairline Stripes">
+        </div>
+        <div class="product-info">
+          <div class="brand-label">INDIG-GROK</div>
+          <h3>Indigo Hairline Stripes</h3>
+          <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
+          <button class="add-btn">Quick Add</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/product2.jpg" alt="White Dobby Textured">
+        </div>
+        <div class="product-info">
+          <div class="brand-label">INDIG-GROK</div>
+          <h3>White Dobby Textured</h3>
+          <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
+          <button class="add-btn">Quick Add</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/product3.jpg" alt="Black Self-Textured">
+        </div>
+        <div class="product-info">
+          <div class="brand-label">INDIG-GROK</div>
+          <h3>Black Self-Textured</h3>
+          <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
+          <button class="add-btn">Quick Add</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 INDIG-GROK Pakistan. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
