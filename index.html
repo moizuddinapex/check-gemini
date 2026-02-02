@@ -5,167 +5,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INDIG-GROK – Premium Men's Shirts</title>
   <style>
-    /* 1. Base Body Styles */
+    /* 1. Global Reset & Scale */
+    * { box-sizing: border-box; }
+    
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       background: url('images/backgroundimage.jpg') no-repeat center center fixed;
       background-size: cover;
       min-height: 100vh;
+      line-height: 1.6;
     }
 
-    /* 2. Header & Logo */
+    /* 2. Enhanced Header & Navigation */
     header {
       background: #000;
       color: white;
-      padding: 30px 20px 20px 20px;
+      padding: 40px 20px; /* Increased padding for size */
       text-align: center;
-      font-size: 2.2rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-      position: relative;
+      position: sticky;
+      top: 0;
       z-index: 2000;
     }
-    
-    .logo { position: absolute; top: 15px; left: 20px; z-index: 2001; }
-    .logo img { max-width: 100px; height: auto; }
 
-    /* 3. Navigation & Dropdown Logic */
+    .brand-name {
+      font-size: 3.5rem; /* Large, bold brand name */
+      font-weight: 900;
+      letter-spacing: 8px;
+      margin-bottom: 20px;
+      display: block;
+      text-transform: uppercase;
+    }
+
+    .logo { 
+      position: absolute; 
+      top: 25px; 
+      left: 40px; 
+    }
+    .logo img { width: 120px; height: auto; } /* Bigger Logo */
+
     .nav-links {
-      margin-top: 15px;
       display: flex;
       justify-content: center;
+      gap: 60px; /* Wider spacing */
       align-items: center;
-      gap: 40px;
+      margin-top: 20px;
     }
 
     .nav-links a {
       color: #fff;
       text-decoration: none;
-      font-size: 0.8rem;
-      letter-spacing: 1.5px;
+      font-size: 1.1rem; /* Bigger font for links */
+      font-weight: 600;
+      letter-spacing: 2px;
       transition: 0.3s;
+      text-transform: uppercase;
     }
 
     .nav-links a:hover { color: #aaa; }
 
-    .dropdown {
-      display: inline-block;
-      position: relative;
-    }
+    /* 3. Larger Dropdown Menu */
+    .dropdown { position: relative; display: inline-block; }
 
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #ffffff;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-      z-index: 3000;
+      background-color: #fff;
+      min-width: 220px; /* Wider dropdown */
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
-      border-radius: 4px;
+      box-shadow: 0px 12px 24px rgba(0,0,0,0.4);
+      padding: 15px 0;
     }
 
     .dropdown-content a {
-      color: #333 !important;
-      padding: 12px 16px;
+      color: #000 !important;
+      padding: 15px 25px;
       display: block;
-      text-align: left;
-      border-bottom: 1px solid #eee;
+      font-size: 1rem;
+      border-bottom: 1px solid #f0f0f0;
     }
 
-    .dropdown-content a:hover { background-color: #f1f1f1; }
     .dropdown:hover .dropdown-content { display: block; }
 
-    /* 4. Product Grid & Container */
+    /* 4. Large Product Grid */
     .container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 30px;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
+      max-width: 1400px; /* Wider container */
+      margin: 60px auto;
+      padding: 60px;
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: 0; /* Modern sharp edges */
+    }
+
+    h1.section-title {
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
     }
 
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Larger cards */
+      gap: 40px;
     }
 
     .product-card {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      transition: 0.3s;
+      background: #fff;
+      border: 1px solid #eee;
+      transition: 0.4s;
     }
 
-    .product-image { height: 380px; background: #f0f0f0; }
+    .product-image { height: 500px; overflow: hidden; } /* Taller Images */
     .product-image img { width: 100%; height: 100%; object-fit: cover; }
-    .product-info { padding: 15px; }
-    .price { font-size: 1.4rem; font-weight: bold; color: #4b0082; }
-    
+
+    .product-info { padding: 30px; text-align: center; }
+    .product-info h3 { font-size: 1.5rem; margin-bottom: 10px; }
+    .price { font-size: 1.8rem; font-weight: bold; color: #000; }
+
     .add-btn { 
-      background: #000; 
-      color: white; 
-      padding: 12px; 
-      border: none; 
-      width: 100%; 
-      cursor: pointer; 
-      font-weight: bold; 
-      margin-top: 15px; 
+      background: #000; color: #fff; padding: 20px; border: none; 
+      width: 100%; cursor: pointer; font-size: 1.1rem; font-weight: bold; 
+      margin-top: 20px; text-transform: uppercase;
     }
 
-    /* 5. Footer & Banner */
-    .brand-banner {
-      position: relative;
-      width: 100%;
-      height: 450px;
-      margin-top: 50px;
-    }
-
-    .brand-banner img { width: 100%; height: 100%; object-fit: cover; }
-    
-    .banner-overlay {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: white;
-      background: rgba(0,0,0,0.5);
-      padding: 40px;
-      width: 100%;
-    }
-
-    footer { background: #000; color: white; padding-top: 50px; text-align: center; }
-    .footer-content { padding-bottom: 40px; }
-    
-    .rights-reserved {
-      background: #111;
-      padding: 20px 0;
-      border-top: 1px solid #333;
-      font-size: 0.8rem;
-      color: #888;
-    }
+    /* 5. Massive Footer */
+    footer { background: #000; color: #fff; padding: 80px 20px 40px; text-align: center; }
+    .footer-brand { font-size: 2.5rem; letter-spacing: 5px; margin-bottom: 30px; }
+    .footer-links a { color: #fff; text-decoration: none; margin: 0 20px; font-size: 1.1rem; }
   </style>
 </head>
 <body>
 
-  <div class="logo">
-    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-  </div>
-
   <header>
-    INDIG-GROK
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+    </div>
+    <span class="brand-name">INDIG-GROK</span>
     
-    <div class="nav-links">
-      <a href="index.html">HOME</a>
-      
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
       <div class="dropdown">
-        <a href="#" class="dropbtn">SHOP</a>
+        <a href="#" class="dropbtn">Shop</a>
         <div class="dropdown-content">
           <a href="#">MEN</a>
           <a href="#">WOMEN</a>
@@ -174,70 +158,52 @@
           <a href="#">FRAGRANCES</a>
         </div>
       </div>
-
-      <a href="contact.html">CONTACT US</a>
-    </div>
+      <a href="contact.html">Contact Us</a>
+    </nav>
   </header>
 
-  <div class="container">
-    <h1 style="text-align:center;">Premium Men's Shirts</h1>
+  <main class="container">
+    <h1 class="section-title">Premium Men's Shirts</h1>
     <div class="products-grid">
-
+      
       <div class="product-card">
-        <a href="product-indigo.html" style="text-decoration: none; color: inherit;">
-          <div class="product-image"><img src="images/product1.jpg" alt="Shirt 1"></div>
-          <div class="product-info">
-            <h3>Indigo Hairline Stripes</h3>
-            <span class="price">Rs 3,490</span>
-          </div>
-        </a>
-        <button class="add-btn">Quick Add</button>
+        <div class="product-image"><img src="images/product1.jpg" alt="Shirt 1"></div>
+        <div class="product-info">
+          <h3>Indigo Hairline Stripes</h3>
+          <span class="price">Rs 3,490</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
       </div>
 
       <div class="product-card">
-        <a href="product-white.html" style="text-decoration: none; color: inherit;">
-          <div class="product-image"><img src="images/product2.jpg" alt="Shirt 2"></div>
-          <div class="product-info">
-            <h3>White Dobby Textured</h3>
-            <span class="price">Rs 3,490</span>
-          </div>
-        </a>
-        <button class="add-btn">Quick Add</button>
+        <div class="product-image"><img src="images/product2.jpg" alt="Shirt 2"></div>
+        <div class="product-info">
+          <h3>White Dobby Textured</h3>
+          <span class="price">Rs 3,490</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
       </div>
 
       <div class="product-card">
-        <a href="product-black.html" style="text-decoration: none; color: inherit;">
-          <div class="product-image"><img src="images/product3.jpg" alt="Shirt 3"></div>
-          <div class="product-info">
-            <h3>Black Self-Textured</h3>
-            <span class="price">Rs 3,490</span>
-          </div>
-        </a>
-        <button class="add-btn">Quick Add</button>
+        <div class="product-image"><img src="images/product3.jpg" alt="Shirt 3"></div>
+        <div class="product-info">
+          <h3>Black Self-Textured</h3>
+          <span class="price">Rs 3,490</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
       </div>
 
     </div>
-  </div>
-
-  <div class="brand-banner">
-    <img src="images/backgroundimage.jpg" alt="Banner">
-    <div class="banner-overlay">
-      <h2>TIMELESS ELEGANCE</h2>
-      <p>Crafted for the modern man.</p>
-    </div>
-  </div>
+  </main>
 
   <footer>
-    <div class="footer-content">
-      <div style="font-size: 1.5rem; letter-spacing: 3px;">INDIG-GROK</div>
-      <p>
-        <a href="contact.html" style="color: white; text-decoration: none; margin-right: 15px;">Contact Us</a> | 
-        Follow us on Instagram | Facebook
-      </p>
+    <div class="footer-brand">INDIG-GROK</div>
+    <div class="footer-links">
+      <a href="contact.html">Contact Us</a>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
     </div>
-    <div class="rights-reserved">
-      <p>© 2026 INDIG-GROK Pakistan. All Rights Reserved.</p>
-    </div>
+    <p style="margin-top: 40px; color: #555;">© 2026 INDIG-GROK Pakistan. All Rights Reserved.</p>
   </footer>
 
 </body>
