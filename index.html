@@ -10,160 +10,128 @@
       padding: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: #111;
-      background: #f8f8f8;
+      background: #e8e0d9 url('images/backgroundimage.jpg') repeat;  /* textured beige fallback + your image */
+      background-size: auto;
       line-height: 1.6;
     }
     header {
       background: #000;
       color: white;
-      padding: 15px 30px;
+      padding: 15px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
-    header h1 {
+    nav ul {
+      list-style: none;
       margin: 0;
-      font-size: 1.8rem;
-      letter-spacing: 1px;
+      padding: 0;
+      display: flex;
+      gap: 30px;
     }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { color: #ccc; }
     .logo img {
-      max-width: 120px;
+      max-width: 140px;
       height: auto;
     }
     .product-container {
-      max-width: 1200px;
-      margin: 40px auto;
+      max-width: 1100px;
+      margin: 50px auto;
       padding: 0 20px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
-    }
-    .product-images {
-      position: sticky;
-      top: 20px;
-      align-self: start;
+      gap: 60px;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     .main-image {
       width: 100%;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    .thumbnails {
-      display: flex;
-      gap: 10px;
-      margin-top: 15px;
-    }
-    .thumbnail {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
       border-radius: 6px;
-      cursor: pointer;
-      border: 2px solid transparent;
     }
-    .thumbnail.active { border-color: #000; }
     .product-info h1 {
-      font-size: 2.2rem;
-      margin: 0 0 10px;
+      font-size: 2.4rem;
+      margin: 0 0 15px;
     }
     .price {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: bold;
-      color: #4b0082;
-      margin: 15px 0;
+      color: #800080;  /* purple like your screenshot */
+      margin: 20px 0;
     }
     .original-price {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       color: #777;
       text-decoration: line-through;
       margin-left: 15px;
-    }
-    .size-selector {
-      margin: 25px 0;
-    }
-    label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-    select, input[type="number"] {
-      width: 100%;
-      max-width: 200px;
-      padding: 12px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
     }
     .add-to-cart {
       background: #000;
       color: white;
       border: none;
-      padding: 15px 30px;
-      font-size: 1.1rem;
+      padding: 16px 40px;
+      font-size: 1.2rem;
       font-weight: bold;
       cursor: pointer;
-      border-radius: 5px;
-      margin-top: 20px;
+      border-radius: 0;  /* square like screenshot buttons */
+      margin-top: 30px;
       width: 100%;
-      max-width: 300px;
     }
     .add-to-cart:hover { background: #222; }
     .description {
       margin-top: 40px;
-      border-top: 1px solid #eee;
+      border-top: 1px solid #ddd;
       padding-top: 30px;
     }
-    .description h2 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-    }
-    ul {
-      padding-left: 20px;
-    }
     footer {
-      text-align: center;
-      padding: 30px;
       background: #000;
       color: white;
-      margin-top: 60px;
+      text-align: center;
+      padding: 30px;
+      margin-top: 80px;
+      font-size: 0.9rem;
     }
-
-    @media (max-width: 768px) {
-      .product-container {
-        grid-template-columns: 1fr;
-      }
-      .product-images { position: static; }
+    @media (max-width: 900px) {
+      .product-container { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>INDIG-GROK</h1>
+    <nav>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/">SHOP</a></li>
+        <li><a href="/">CONTACT US</a></li>
+      </ul>
+    </nav>
     <div class="logo">
-      <img src="images/logo.png" alt="INDIG-GROK Logo">
+      <img src="images/logo.png" alt="INDIG-GROK">
     </div>
   </header>
 
   <div class="product-container">
-    <div class="product-images">
+    <div>
       <img src="images/product1.jpg" alt="Indigo Hairline Stripes Formal Shirt" class="main-image">
-      <!-- Add more thumbnails if you have additional angles -->
-      <!-- <div class="thumbnails">
-        <img src="images/product1-angle2.jpg" class="thumbnail active">
-        <img src="images/product1-detail.jpg" class="thumbnail">
-      </div> -->
     </div>
 
     <div class="product-info">
-      <h1>Indigo Hairline Stripes Formal Shirt</h1>
+      <h1>Indigo Hairline Stripes</h1>
       <div class="price">
         Rs 3,490 <span class="original-price">Rs 4,490</span>
       </div>
 
-      <div class="size-selector">
-        <label for="size">Select Size</label>
+      <div>
+        <label for="size">Size</label>
         <select id="size">
           <option>S</option>
           <option>M</option>
@@ -173,30 +141,24 @@
         </select>
       </div>
 
-      <div class="size-selector">
-        <label for="quantity">Quantity</label>
-        <input type="number" id="quantity" value="1" min="1" max="10">
-      </div>
-
-      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-cart">QUICK ADD</button>
 
       <div class="description">
         <h2>Product Details</h2>
-        <p>Refined sophistication in subtle indigo hairline stripes. This regular fit formal shirt is crafted for the modern gentleman who values timeless elegance and everyday comfort.</p>
+        <p>Refined sophistication in subtle indigo hairline stripes. Regular fit formal shirt crafted for timeless elegance and comfort.</p>
         <ul>
-          <li>Premium cotton blend fabric</li>
-          <li>Subtle hairline stripe pattern in indigo tones</li>
-          <li>Regular fit with structured collar</li>
-          <li>Easy-care finish — minimal ironing required</li>
-          <li>Perfect for office, formal events, or smart-casual looks</li>
+          <li>Premium cotton blend</li>
+          <li>Subtle indigo stripes</li>
+          <li>Structured collar</li>
+          <li>Easy-care fabric</li>
         </ul>
-        <p>Pair with tailored trousers and leather shoes for a polished appearance.</p>
       </div>
     </div>
   </div>
 
   <footer>
-    <p>© 2026 INDIG-GROK Pakistan. All rights reserved.</p>
+    <p>INDIG-GROK</p>
+    <p>© 2026 INDIG-GROK Pakistan. All Rights Reserved.</p>
   </footer>
 
 </body>
