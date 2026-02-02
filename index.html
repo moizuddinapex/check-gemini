@@ -2,176 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INDIG-GROK – Premium Men's Shirts</title>
   <style>
-    /* 1. Nuke all default margins and padding */
-    * { 
-      margin: 0; 
-      padding: 0; 
-      box-sizing: border-box; 
-    }
-
+    /* 1. Standard Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
     body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background-color: #fff;
-      width: 100vw;
-      overflow-x: hidden;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #1a1a1a;
+      line-height: 1.6;
     }
 
-    /* 2. Full-Width Header - No Gaps */
+    /* 2. Header: Balanced Size */
     header {
       background: #000;
-      color: white;
-      width: 100%;
-      padding: 5vw 0; /* Padding scales with screen width */
+      color: #fff;
+      padding: 40px 0;
       text-align: center;
-      position: relative;
     }
 
     .brand-name {
-      font-size: 8vw; /* Scale font to screen width */
-      font-weight: 900;
-      letter-spacing: 2vw;
+      font-size: 2.8rem; /* Large but not overwhelming */
+      font-weight: 800;
+      letter-spacing: 6px;
       text-transform: uppercase;
-      line-height: 1;
+      margin-bottom: 15px;
     }
 
     .nav-links {
       display: flex;
       justify-content: center;
-      gap: 5vw;
-      margin-top: 3vw;
+      gap: 40px;
     }
 
     .nav-links a {
       color: #fff;
       text-decoration: none;
-      font-size: 1.5vw;
-      font-weight: bold;
-      letter-spacing: 0.3vw;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 2px;
       text-transform: uppercase;
+      transition: opacity 0.3s;
     }
 
-    /* 3. The "Fix": Massive Product Grid spanning 100% width */
-    .full-screen-container {
-      width: 100%;
-      padding: 0; /* Removed all side padding */
+    .nav-links a:hover { opacity: 0.6; }
+
+    /* 3. The Main Container (The "Perfect" Width) */
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 60px 20px;
     }
 
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 50px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    /* 4. Product Grid */
     .products-grid {
       display: grid;
-      /* Forces exactly 3 columns that take up every pixel of width */
-      grid-template-columns: repeat(3, 1fr); 
-      gap: 0; /* No gaps between images for that high-fashion look */
+      grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+      gap: 30px;
     }
 
     .product-card {
-      width: 100%;
-      border: 1px solid #000;
-      overflow: hidden;
+      background: #fff;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
     }
 
     .product-image {
       width: 100%;
-      height: 80vh; /* Takes up 80% of the vertical screen height */
-    }
-
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .product-info {
-      padding: 3vw;
-      text-align: center;
-      background: #fff;
-    }
-
-    .product-info h3 {
-      font-size: 2vw;
-      margin-bottom: 1vw;
-      text-transform: uppercase;
-    }
-
-    .price {
-      font-size: 2.5vw;
-      font-weight: 900;
-      color: #000;
-      display: block;
-    }
-
-    .add-btn {
-      background: #000;
-      color: #fff;
-      padding: 2vw;
-      width: 100%;
-      border: none;
-      font-size: 1.2vw;
-      font-weight: bold;
-      text-transform: uppercase;
-      cursor: pointer;
-      margin-top: 2vw;
-    }
-
-    /* 4. Massive Footer */
-    footer {
-      background: #000;
-      color: #fff;
-      padding: 10vw 0;
-      text-align: center;
-      width: 100%;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="brand-name">INDIG-GROK</div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="#">Shop All</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <div class="full-screen-container">
-    <div class="products-grid">
-      
-      <div class="product-card">
-        <div class="product-image"><img src="images/product1.jpg" alt="Shirt 1"></div>
-        <div class="product-info">
-          <h3>Indigo Hairline</h3>
-          <span class="price">Rs 3,490</span>
-          <button class="add-btn">Add to Cart</button>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-image"><img src="images/product2.jpg" alt="Shirt 2"></div>
-        <div class="product-info">
-          <h3>White Dobby</h3>
-          <span class="price">Rs 3,490</span>
-          <button class="add-btn">Add to Cart</button>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-image"><img src="images/product3.jpg" alt="Shirt 3"></div>
-        <div class="product-info">
-          <h3>Black Textured</h3>
-          <span class="price">Rs 3,490</span>
-          <button class="add-btn">Add to Cart</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <footer>
-    <div style="font-size: 5vw; letter-spacing: 2vw;">INDIG-GROK</div>
-  </footer>
-
-</body>
-</html>
+      height: 480px; /* Professional portrait
