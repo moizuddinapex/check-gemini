@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us – INDIG-GROK</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f9f9f9; color: #111; }
+    header { background: #000; color: white; padding: 20px; text-align: center; position: relative; }
+    .logo { position: absolute; top: 15px; left: 20px; }
+    .logo img { max-width: 80px; }
+    
+    .contact-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    h1 { text-align: center; font-size: 2rem; margin-bottom: 30px; }
+    
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    
+    .info-section h3 { margin-top: 0; }
+    .info-item { margin-bottom: 20px; }
+    .info-item p { color: #666; margin: 5px 0; }
+
+    .form-section input, .form-section textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .submit-btn {
+      background: #000;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .submit-btn:hover { background: #333; }
+
+    footer { background: #000; color: #888; text-align: center; padding: 20px; margin-top: 50px; font-size: 0.8rem; }
+
+    @media (max-width: 600px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></div>
+    INDIG-GROK
+  </header>
+
+  <div class="contact-container">
+    <h1>Contact Us</h1>
+    
+    <div class="contact-grid">
+      <div class="info-section">
+        <div class="info-item">
+          <h3>Customer Support</h3>
+          <p>Email: support@indig-grok.com</p>
+          <p>WhatsApp: +92 300 1234567</p>
+        </div>
+        <div class="info-item">
+          <h3>Operating Hours</h3>
+          <p>Monday - Saturday</p>
+          <p>10:00 AM - 8:00 PM (PKT)</p>
+        </div>
+        <div class="info-item">
+          <h3>Head Office</h3>
+          <p>Karachi, Pakistan</p>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <form action="mailto:support@indig-grok.com" method="post" enctype="text/plain">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="5" placeholder="How can we help you?" required></textarea>
+          <button type="submit" class="submit-btn">SEND MESSAGE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 INDIG-GROK Pakistan. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
