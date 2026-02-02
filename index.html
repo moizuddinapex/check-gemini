@@ -9,8 +9,6 @@
       margin: 0;
       padding: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #111;
-      /* Background Image Path Fixed */
       background: url('images/backgroundimage.jpg') no-repeat center center fixed;
       background-size: cover;
       min-height: 100vh;
@@ -25,29 +23,17 @@
       letter-spacing: 2px;
       position: relative;
     }
-    /* Logo - Top Left Corner */
-    .logo {
-      position: absolute;
-      top: 15px;
-      left: 20px;
-      z-index: 1000;
-    }
-    .logo img {
-      max-width: 120px;
-      height: auto;
-    }
+    .logo { position: absolute; top: 15px; left: 20px; z-index: 1000; }
+    .logo img { max-width: 100px; height: auto; }
+    
     .container {
       max-width: 1200px;
       margin: 40px auto;
       padding: 30px;
-      /* Semi-transparent background to see the background image */
-      background: rgba(255, 255, 255, 0.88);
+      background: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
-    h1 { text-align: center; font-size: 2.4rem; margin-bottom: 10px; }
-    .description { text-align: center; font-size: 1.1rem; color: #444; max-width: 800px; margin: 0 auto 40px; }
-    
+
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -61,116 +47,106 @@
       text-align: center;
       transition: 0.3s;
     }
-    .product-card:hover { transform: translateY(-5px); }
-    .product-image {
-      height: 380px;
-      background: #f0f0f0;
-    }
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .brand-label {
-      background: #000;
-      color: white;
-      padding: 6px 12px;
-      font-size: 0.8rem;
-      font-weight: bold;
-      display: inline-block;
-      margin: 15px 0 5px;
-    }
+    .product-image { height: 380px; background: #f0f0f0; }
+    .product-image img { width: 100%; height: 100%; object-fit: cover; }
     .product-info { padding: 15px; }
     .price { font-size: 1.4rem; font-weight: bold; color: #4b0082; }
-    .original { text-decoration: line-through; color: #777; margin-left: 10px; font-size: 0.9rem; }
-    
-    .add-btn {
-      background: #000;
-      color: white;
-      padding: 12px;
-      border: none;
+    .add-btn { background: #000; color: white; padding: 12px; border: none; width: 100%; cursor: pointer; font-weight: bold; margin-top: 15px; }
+
+    /* Bottom Sections (Diners Style) */
+    .brand-banner {
+      position: relative;
       width: 100%;
-      cursor: pointer;
-      font-weight: bold;
-      margin-top: 15px;
+      height: 450px;
+      margin-top: 50px;
     }
-    footer {
+    .brand-banner img { width: 100%; height: 100%; object-fit: cover; }
+    .banner-overlay {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
-      padding: 40px;
-      background: rgba(0,0,0,0.9);
       color: white;
-      margin-top: 60px;
+      background: rgba(0,0,0,0.5);
+      padding: 40px;
+      width: 100%;
+    }
+
+    footer { background: #000; color: white; padding-top: 50px; text-align: center; }
+    .footer-content { padding-bottom: 40px; }
+    .rights-reserved {
+      background: #111;
+      padding: 20px 0;
+      border-top: 1px solid #333;
+      font-size: 0.8rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
   <div class="logo">
-    <img src="images/logo.png" alt="INDIG-GROK Logo">
+    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
   </div>
 
   <header>INDIG-GROK</header>
 
   <div class="container">
-    <h1>Premium Men's Shirts</h1>
-    <p class="description">Elevate your wardrobe with refined pieces blending timeless elegance with everyday comfort.</p>
-
+    <h1 style="text-align:center;">Premium Men's Shirts</h1>
     <div class="products-grid">
 
       <div class="product-card">
-  <a href="product-indigo.html" style="text-decoration: none; color: inherit;">
-    
-    <div class="product-image">
-      <img src="images/product1.jpg" alt="Indigo Hairline Stripes">
-    </div>
-    
-    <div class="product-info">
-      <div class="brand-label">INDIG-GROK</div>
-      <h3>Indigo Hairline Stripes</h3>
-      <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
-    </div>
-
-  </a> <button class="add-btn">Quick Add</button>
-</div>
+        <a href="product-indigo.html" style="text-decoration: none; color: inherit;">
+          <div class="product-image"><img src="images/product1.jpg" alt="Shirt 1"></div>
+          <div class="product-info">
+            <h3>Indigo Hairline Stripes</h3>
+            <span class="price">Rs 3,490</span>
+          </div>
+        </a>
+        <button class="add-btn">Quick Add</button>
+      </div>
 
       <div class="product-card">
-  <a href="product-white.html" style="text-decoration: none; color: inherit;">
-    
-    <div class="product-image">
-      <img src="images/product2.jpg" alt="White Dobby Textured">
-    </div>
-    
-    <div class="product-info">
-      <div class="brand-label">INDIG-GROK</div>
-      <h3>White Dobby Textured</h3>
-      <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
-    </div>
-
-  </a>
-
-  <button class="add-btn">Quick Add</button>
-</div>
+        <a href="product-white.html" style="text-decoration: none; color: inherit;">
+          <div class="product-image"><img src="images/product2.jpg" alt="Shirt 2"></div>
+          <div class="product-info">
+            <h3>White Dobby Textured</h3>
+            <span class="price">Rs 3,490</span>
+          </div>
+        </a>
+        <button class="add-btn">Quick Add</button>
+      </div>
 
       <div class="product-card">
-  <a href="product-black.html" style="text-decoration: none; color: inherit;">
-    
-    <div class="product-image">
-      <img src="images/product3.jpg" alt="Black Self-Textured">
-    </div>
-    
-    <div class="product-info">
-      <div class="brand-label">INDIG-GROK</div>
-      <h3>Black Self-Textured</h3>
-      <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
-    </div>
+        <a href="product-black.html" style="text-decoration: none; color: inherit;">
+          <div class="product-image"><img src="images/product3.jpg" alt="Shirt 3"></div>
+          <div class="product-info">
+            <h3>Black Self-Textured</h3>
+            <span class="price">Rs 3,490</span>
+          </div>
+        </a>
+        <button class="add-btn">Quick Add</button>
+      </div>
 
-  </a>
+    </div>
+  </div>
 
-  <button class="add-btn">Quick Add</button>
-</div>
+  <div class="brand-banner">
+    <img src="images/backgroundimage.jpg" alt="Banner">
+    <div class="banner-overlay">
+      <h2>TIMELESS ELEGANCE</h2>
+      <p>Crafted for the modern man.</p>
+    </div>
+  </div>
 
   <footer>
-    <p>© 2026 INDIG-GROK Pakistan. All rights reserved.</p>
+    <div class="footer-content">
+      <div style="font-size: 1.5rem; letter-spacing: 3px;">INDIG-GROK</div>
+      <p>Follow us on Instagram | Facebook</p>
+    </div>
+    <div class="rights-reserved">
+      <p>© 2026 INDIG-GROK Pakistan. All Rights Reserved.</p>
+    </div>
   </footer>
 
 </body>
