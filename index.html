@@ -3,203 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INDIG-GROK – Premium Men's Shirts</title>
+  <title>Indigo Hairline Stripes Formal Shirt – INDIG-GROK</title>
   <style>
-    /* 1. Global Scaling - Making everything bigger by default */
-    html {
-      font-size: 18px; /* Standardizing base size */
-    }
-
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: #f4f4f4; /* Fallback color */
-      background: url('images/backgroundimage.jpg') no-repeat center center fixed;
-      background-size: cover;
-      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      background: #f8f8f8;
+      line-height: 1.6;
     }
-
-    /* 2. Massive Header Section */
     header {
       background: #000;
       color: white;
-      padding: 60px 20px; /* Huge padding for height */
-      text-align: center;
-      position: relative;
-      z-index: 2000;
-    }
-
-    .brand-name {
-      font-size: 5rem; /* Massive brand presence */
-      font-weight: 900;
-      letter-spacing: 12px;
-      margin: 0;
-      text-transform: uppercase;
-    }
-
-    .logo { 
-      position: absolute; 
-      top: 40px; 
-      left: 50px; 
-    }
-    .logo img { width: 140px; height: auto; }
-
-    /* 3. Navigation with Large Links */
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 80px;
-      margin-top: 30px;
-    }
-
-    .nav-links a, .dropbtn {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.4rem; /* Significantly larger text */
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-
-    /* 4. Dropdown Menu (Fixing the "small" look) */
-    .dropdown { position: relative; }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #fff;
-      min-width: 250px;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      box-shadow: 0px 15px 30px rgba(0,0,0,0.5);
-      padding: 20px 0;
-    }
-
-    .dropdown-content a {
-      color: #000 !important;
       padding: 15px 30px;
-      display: block;
-      font-size: 1.2rem;
-      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    .dropdown:hover .dropdown-content { display: block; }
-
-    /* 5. Wide Product Container */
-    .container {
-      max-width: 1600px; /* Fills most of the screen width */
-      margin: 80px auto;
-      padding: 80px;
-      background: rgba(255, 255, 255, 0.98);
-      box-shadow: 0 0 50px rgba(0,0,0,0.1);
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
     }
-
-    .section-title {
-      font-size: 3.5rem;
-      text-align: center;
-      margin-bottom: 60px;
-      letter-spacing: 5px;
+    .logo img {
+      max-width: 120px;
+      height: auto;
     }
-
-    /* 6. Larger Product Grid */
-    .products-grid {
+    .product-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Wider cards */
+      grid-template-columns: 1fr 1fr;
       gap: 50px;
     }
-
-    .product-card {
-      background: #fff;
-      border: 1px solid #ddd;
-      transition: transform 0.3s;
+    .product-images {
+      position: sticky;
+      top: 20px;
+      align-self: start;
+    }
+    .main-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .thumbnail.active { border-color: #000; }
+    .product-info h1 {
+      font-size: 2.2rem;
+      margin: 0 0 10px;
+    }
+    .price {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #4b0082;
+      margin: 15px 0;
+    }
+    .original-price {
+      font-size: 1.3rem;
+      color: #777;
+      text-decoration: line-through;
+      margin-left: 15px;
+    }
+    .size-selector {
+      margin: 25px 0;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    select, input[type="number"] {
+      width: 100%;
+      max-width: 200px;
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .add-to-cart {
+      background: #000;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 300px;
+    }
+    .add-to-cart:hover { background: #222; }
+    .description {
+      margin-top: 40px;
+      border-top: 1px solid #eee;
+      padding-top: 30px;
+    }
+    .description h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #000;
+      color: white;
+      margin-top: 60px;
     }
 
-    .product-image { height: 600px; overflow: hidden; } /* Very tall images */
-    .product-image img { width: 100%; height: 100%; object-fit: cover; }
-
-    .product-info { padding: 40px; text-align: center; }
-    .product-info h3 { font-size: 2rem; margin-bottom: 15px; }
-    .price { font-size: 2.2rem; font-weight: bold; color: #4b0082; }
-
-    .add-btn { 
-      background: #000; color: #fff; padding: 25px; border: none; 
-      width: 100%; cursor: pointer; font-size: 1.4rem; font-weight: bold; 
-      margin-top: 30px; text-transform: uppercase;
+    @media (max-width: 768px) {
+      .product-container {
+        grid-template-columns: 1fr;
+      }
+      .product-images { position: static; }
     }
-
-    /* 7. Massive Footer */
-    footer { 
-      background: #000; 
-      color: #fff; 
-      padding: 100px 20px; 
-      text-align: center; 
-    }
-    .footer-brand { font-size: 3rem; margin-bottom: 40px; }
   </style>
 </head>
 <body>
 
   <header>
+    <h1>INDIG-GROK</h1>
     <div class="logo">
-      <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+      <img src="images/logo.png" alt="INDIG-GROK Logo">
     </div>
-    <h1 class="brand-name">INDIG-GROK</h1>
-    
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <div class="dropdown">
-        <span class="dropbtn">Shop</span>
-        <div class="dropdown-content">
-          <a href="#">MEN</a>
-          <a href="#">WOMEN</a>
-          <a href="#">KIDS</a>
-          <a href="#">SHOES</a>
-          <a href="#">FRAGRANCES</a>
-        </div>
-      </div>
-      <a href="contact.html">Contact Us</a>
-    </nav>
   </header>
 
-  <div class="container">
-    <h2 class="section-title">Premium Men's Shirts</h2>
-    <div class="products-grid">
-      
-      <div class="product-card">
-        <div class="product-image"><img src="images/product1.jpg" alt="Shirt 1"></div>
-        <div class="product-info">
-          <h3>Indigo Hairline Stripes</h3>
-          <span class="price">Rs 3,490</span>
-          <button class="add-btn">Quick Add</button>
-        </div>
+  <div class="product-container">
+    <div class="product-images">
+      <img src="images/product1.jpg" alt="Indigo Hairline Stripes Formal Shirt" class="main-image">
+      <!-- Add more thumbnails if you have additional angles -->
+      <!-- <div class="thumbnails">
+        <img src="images/product1-angle2.jpg" class="thumbnail active">
+        <img src="images/product1-detail.jpg" class="thumbnail">
+      </div> -->
+    </div>
+
+    <div class="product-info">
+      <h1>Indigo Hairline Stripes Formal Shirt</h1>
+      <div class="price">
+        Rs 3,490 <span class="original-price">Rs 4,490</span>
       </div>
 
-      <div class="product-card">
-        <div class="product-image"><img src="images/product2.jpg" alt="Shirt 2"></div>
-        <div class="product-info">
-          <h3>White Dobby Textured</h3>
-          <span class="price">Rs 3,490</span>
-          <button class="add-btn">Quick Add</button>
-        </div>
+      <div class="size-selector">
+        <label for="size">Select Size</label>
+        <select id="size">
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+          <option>XXL</option>
+        </select>
       </div>
 
-      <div class="product-card">
-        <div class="product-image"><img src="images/product3.jpg" alt="Shirt 3"></div>
-        <div class="product-info">
-          <h3>Black Self-Textured</h3>
-          <span class="price">Rs 3,490</span>
-          <button class="add-btn">Quick Add</button>
-        </div>
+      <div class="size-selector">
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" value="1" min="1" max="10">
       </div>
 
+      <button class="add-to-cart">Add to Cart</button>
+
+      <div class="description">
+        <h2>Product Details</h2>
+        <p>Refined sophistication in subtle indigo hairline stripes. This regular fit formal shirt is crafted for the modern gentleman who values timeless elegance and everyday comfort.</p>
+        <ul>
+          <li>Premium cotton blend fabric</li>
+          <li>Subtle hairline stripe pattern in indigo tones</li>
+          <li>Regular fit with structured collar</li>
+          <li>Easy-care finish — minimal ironing required</li>
+          <li>Perfect for office, formal events, or smart-casual looks</li>
+        </ul>
+        <p>Pair with tailored trousers and leather shoes for a polished appearance.</p>
+      </div>
     </div>
   </div>
 
   <footer>
-    <div class="footer-brand">INDIG-GROK</div>
-    <p style="font-size: 1.2rem; color: #888;">© 2026 INDIG-GROK Pakistan. All Rights Reserved.</p>
+    <p>© 2026 INDIG-GROK Pakistan. All rights reserved.</p>
   </footer>
 
 </body>
