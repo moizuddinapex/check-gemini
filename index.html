@@ -1,260 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INDIG-GROK – Premium Men's Shirts</title>
-  <style>
-   /* Container for the dropdown */
-.dropdown {
-  display: inline-block;
-  position: relative;
-}
-
-/* Style the dropdown menu (the hidden box) */
-.dropdown-content {
-  display: none; /* Hide it by default */
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1001; /* Make sure it stays on top */
-  top: 100%; /* Position it right below the SHOP text */
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 4px;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: #333 !important; /* Make text dark so it's readable on white background */
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-size: 0.75rem;
-  text-align: left;
-  border-bottom: 1px solid #eee;
-}
-
-/* Change color when you hover over a category */
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-/* THE MAGIC: Show the menu when hovering over the SHOP wrapper */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.nav-links {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  gap: 40px; /* Space between HOME, SHOP, and CONTACT */
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: normal;
-  letter-spacing: 1.5px;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #aaa;
-}
-    
-    
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: url('images/backgroundimage.jpg') no-repeat center center fixed;
-      background-size: cover;
-      min-height: 100vh;
-    }
-    header {
-  background: #000;
-  color: white;
-  padding: 30px 20px 20px 20px; /* Added padding to make space */
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  position: relative;
-}
-
-/* Styling for the navigation line below the brand name */
-.nav-links {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  gap: 40px; /* Space between the links */
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.8rem; /* Smaller font for a premium look */
-  font-weight: normal;
-  letter-spacing: 1.5px;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #aaa; /* Changes color when you hover over it */
-}
-    .logo { position: absolute; top: 15px; left: 20px; z-index: 1000; }
-    .logo img { max-width: 100px; height: auto; }
-    
-    .container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 30px;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 25px;
-    }
-    .product-card {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      transition: 0.3s;
-    }
-    .product-image { height: 380px; background: #f0f0f0; }
-    .product-image img { width: 100%; height: 100%; object-fit: cover; }
-    .product-info { padding: 15px; }
-    .price { font-size: 1.4rem; font-weight: bold; color: #4b0082; }
-    .add-btn { background: #000; color: white; padding: 12px; border: none; width: 100%; cursor: pointer; font-weight: bold; margin-top: 15px; }
-
-    /* Bottom Sections (Diners Style) */
-    .brand-banner {
-      position: relative;
-      width: 100%;
-      height: 450px;
-      margin-top: 50px;
-    }
-    .brand-banner img { width: 100%; height: 100%; object-fit: cover; }
-    .banner-overlay {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: white;
-      background: rgba(0,0,0,0.5);
-      padding: 40px;
-      width: 100%;
-    }
-
-    footer { background: #000; color: white; padding-top: 50px; text-align: center; }
-    .footer-content { padding-bottom: 40px; }
-    .rights-reserved {
-      background: #111;
-      padding: 20px 0;
-      border-top: 1px solid #333;
-      font-size: 0.8rem;
-      color: #888;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INDIG-GROK – Premium Men's Shirts</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      /* Background Image Path Fixed */
+      background: url('images/backgroundimage.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+    }
+    header {
+      background: #000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      position: relative;
+    }
+    /* Logo - Top Left Corner */
+    .logo {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      z-index: 1000;
+    }
+    .logo img {
+      max-width: 120px;
+      height: auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px;
+      /* Semi-transparent background to see the background image */
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    h1 { text-align: center; font-size: 2.4rem; margin-bottom: 10px; }
+    .description { text-align: center; font-size: 1.1rem; color: #444; max-width: 800px; margin: 0 auto 40px; }
+    
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .product-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .product-card:hover { transform: translateY(-5px); }
+    .product-image {
+      height: 380px;
+      background: #f0f0f0;
+    }
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .brand-label {
+      background: #000;
+      color: white;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      display: inline-block;
+      margin: 15px 0 5px;
+    }
+    .product-info { padding: 15px; }
+    .price { font-size: 1.4rem; font-weight: bold; color: #4b0082; }
+    .original { text-decoration: line-through; color: #777; margin-left: 10px; font-size: 0.9rem; }
+    
+    .add-btn {
+      background: #000;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: rgba(0,0,0,0.9);
+      color: white;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="logo">
-    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-  </div>
+  <div class="logo">
+    <img src="images/logo.png" alt="INDIG-GROK Logo">
+  </div>
 
-  <header>
-  INDIG-GROK
-  
-  <div class="nav-links">
-    <a href="index.html">HOME</a>
-    
-    <div class="dropdown">
-      <a href="#" class="dropbtn">SHOP</a>
-      <div class="dropdown-content">
-        <a href="#">MEN</a>
-        <a href="#">WOMEN</a>
-        <a href="#">KIDS</a>
-        <a href="#">SHOES</a>
-        <a href="#">FRAGRANCES</a>
-      </div>
-    </div>
+  <header>INDIG-GROK</header>
 
-    <a href="contact.html">CONTACT US</a>
-  </div>
-</header>
+  <div class="container">
+    <h1>Premium Men's Shirts</h1>
+    <p class="description">Elevate your wardrobe with refined pieces blending timeless elegance with everyday comfort.</p>
 
-  <div class="container">
-    <h1 style="text-align:center;">Premium Men's Shirts</h1>
-    <div class="products-grid">
+    <div class="products-grid">
 
-      <div class="product-card">
-        <a href="product-indigo.html" style="text-decoration: none; color: inherit;">
-          <div class="product-image"><img src="images/product1.jpg" alt="Shirt 1"></div>
-          <div class="product-info">
-            <h3>Indigo Hairline Stripes</h3>
-            <span class="price">Rs 3,490</span>
-          </div>
-        </a>
-        <button class="add-btn">Quick Add</button>
-      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/product1.jpg" alt="Indigo Hairline Stripes">
+        </div>
+        <div class="product-info">
+          <div class="brand-label">INDIG-GROK</div>
+          <h3>Indigo Hairline Stripes</h3>
+          <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
+          <button class="add-btn">Quick Add</button>
+        </div>
+      </div>
 
-      <div class="product-card">
-        <a href="product-white.html" style="text-decoration: none; color: inherit;">
-          <div class="product-image"><img src="images/product2.jpg" alt="Shirt 2"></div>
-          <div class="product-info">
-            <h3>White Dobby Textured</h3>
-            <span class="price">Rs 3,490</span>
-          </div>
-        </a>
-        <button class="add-btn">Quick Add</button>
-      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/product2.jpg" alt="White Dobby Textured">
+        </div>
+        <div class="product-info">
+          <div class="brand-label">INDIG-GROK</div>
+          <h3>White Dobby Textured</h3>
+          <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
+          <button class="add-btn">Quick Add</button>
+        </div>
+      </div>
 
-      <div class="product-card">
-        <a href="product-black.html" style="text-decoration: none; color: inherit;">
-          <div class="product-image"><img src="images/product3.jpg" alt="Shirt 3"></div>
-          <div class="product-info">
-            <h3>Black Self-Textured</h3>
-            <span class="price">Rs 3,490</span>
-          </div>
-        </a>
-        <button class="add-btn">Quick Add</button>
-      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/product3.jpg" alt="Black Self-Textured">
+        </div>
+        <div class="product-info">
+          <div class="brand-label">INDIG-GROK</div>
+          <h3>Black Self-Textured</h3>
+          <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
+          <button class="add-btn">Quick Add</button>
+        </div>
+      </div>
 
-    </div>
-  </div>
+    </div>
+  </div>
 
-  <div class="brand-banner">
-    <img src="images/backgroundimage.jpg" alt="Banner">
-    <div class="banner-overlay">
-      <h2>TIMELESS ELEGANCE</h2>
-      <p>Crafted for the modern man.</p>
-    </div>
-  </div>
-
-  <footer>
-    <div class="footer-content">
-  <div style="font-size: 1.5rem; letter-spacing: 3px;">INDIG-GROK</div>
-  <p>
-    <a href="contact.html" style="color: white; text-decoration: none; margin-right: 15px;">Contact Us</a> | 
-    Follow us on Instagram | Facebook
-  </p>
-</div>
-    <div class="rights-reserved">
-      <p>© 2026 INDIG-GROK Pakistan. All Rights Reserved.</p>
-    </div>
-  </footer>
+  <footer>
+    <p>© 2026 INDIG-GROK Pakistan. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
-Look at this code
