@@ -5,137 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INDIG-GROK – Premium Men's Shirts</title>
   <style>
-    /* 1. Global Reset & Scale */
-    * { box-sizing: border-box; }
-    
+    /* 1. Global Scaling - Making everything bigger by default */
+    html {
+      font-size: 18px; /* Standardizing base size */
+    }
+
     body {
       margin: 0;
       padding: 0;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #f4f4f4; /* Fallback color */
       background: url('images/backgroundimage.jpg') no-repeat center center fixed;
       background-size: cover;
       min-height: 100vh;
-      line-height: 1.6;
     }
 
-    /* 2. Enhanced Header & Navigation */
+    /* 2. Massive Header Section */
     header {
       background: #000;
       color: white;
-      padding: 40px 20px; /* Increased padding for size */
+      padding: 60px 20px; /* Huge padding for height */
       text-align: center;
-      position: sticky;
-      top: 0;
+      position: relative;
       z-index: 2000;
     }
 
     .brand-name {
-      font-size: 3.5rem; /* Large, bold brand name */
+      font-size: 5rem; /* Massive brand presence */
       font-weight: 900;
-      letter-spacing: 8px;
-      margin-bottom: 20px;
-      display: block;
+      letter-spacing: 12px;
+      margin: 0;
       text-transform: uppercase;
     }
 
     .logo { 
       position: absolute; 
-      top: 25px; 
-      left: 40px; 
+      top: 40px; 
+      left: 50px; 
     }
-    .logo img { width: 120px; height: auto; } /* Bigger Logo */
+    .logo img { width: 140px; height: auto; }
 
+    /* 3. Navigation with Large Links */
     .nav-links {
       display: flex;
       justify-content: center;
-      gap: 60px; /* Wider spacing */
-      align-items: center;
-      margin-top: 20px;
+      gap: 80px;
+      margin-top: 30px;
     }
 
-    .nav-links a {
+    .nav-links a, .dropbtn {
       color: #fff;
       text-decoration: none;
-      font-size: 1.1rem; /* Bigger font for links */
-      font-weight: 600;
-      letter-spacing: 2px;
-      transition: 0.3s;
+      font-size: 1.4rem; /* Significantly larger text */
+      font-weight: 700;
+      letter-spacing: 3px;
       text-transform: uppercase;
+      cursor: pointer;
     }
 
-    .nav-links a:hover { color: #aaa; }
-
-    /* 3. Larger Dropdown Menu */
-    .dropdown { position: relative; display: inline-block; }
-
+    /* 4. Dropdown Menu (Fixing the "small" look) */
+    .dropdown { position: relative; }
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: #fff;
-      min-width: 220px; /* Wider dropdown */
+      min-width: 250px;
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
-      box-shadow: 0px 12px 24px rgba(0,0,0,0.4);
-      padding: 15px 0;
+      box-shadow: 0px 15px 30px rgba(0,0,0,0.5);
+      padding: 20px 0;
     }
 
     .dropdown-content a {
       color: #000 !important;
-      padding: 15px 25px;
+      padding: 15px 30px;
       display: block;
-      font-size: 1rem;
-      border-bottom: 1px solid #f0f0f0;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #eee;
     }
 
     .dropdown:hover .dropdown-content { display: block; }
 
-    /* 4. Large Product Grid */
+    /* 5. Wide Product Container */
     .container {
-      max-width: 1400px; /* Wider container */
-      margin: 60px auto;
-      padding: 60px;
+      max-width: 1600px; /* Fills most of the screen width */
+      margin: 80px auto;
+      padding: 80px;
       background: rgba(255, 255, 255, 0.98);
-      border-radius: 0; /* Modern sharp edges */
+      box-shadow: 0 0 50px rgba(0,0,0,0.1);
     }
 
-    h1.section-title {
-      font-size: 2.8rem;
+    .section-title {
+      font-size: 3.5rem;
       text-align: center;
-      margin-bottom: 50px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
+      margin-bottom: 60px;
+      letter-spacing: 5px;
     }
 
+    /* 6. Larger Product Grid */
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Larger cards */
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Wider cards */
+      gap: 50px;
     }
 
     .product-card {
       background: #fff;
-      border: 1px solid #eee;
-      transition: 0.4s;
+      border: 1px solid #ddd;
+      transition: transform 0.3s;
     }
 
-    .product-image { height: 500px; overflow: hidden; } /* Taller Images */
+    .product-image { height: 600px; overflow: hidden; } /* Very tall images */
     .product-image img { width: 100%; height: 100%; object-fit: cover; }
 
-    .product-info { padding: 30px; text-align: center; }
-    .product-info h3 { font-size: 1.5rem; margin-bottom: 10px; }
-    .price { font-size: 1.8rem; font-weight: bold; color: #000; }
+    .product-info { padding: 40px; text-align: center; }
+    .product-info h3 { font-size: 2rem; margin-bottom: 15px; }
+    .price { font-size: 2.2rem; font-weight: bold; color: #4b0082; }
 
     .add-btn { 
-      background: #000; color: #fff; padding: 20px; border: none; 
-      width: 100%; cursor: pointer; font-size: 1.1rem; font-weight: bold; 
-      margin-top: 20px; text-transform: uppercase;
+      background: #000; color: #fff; padding: 25px; border: none; 
+      width: 100%; cursor: pointer; font-size: 1.4rem; font-weight: bold; 
+      margin-top: 30px; text-transform: uppercase;
     }
 
-    /* 5. Massive Footer */
-    footer { background: #000; color: #fff; padding: 80px 20px 40px; text-align: center; }
-    .footer-brand { font-size: 2.5rem; letter-spacing: 5px; margin-bottom: 30px; }
-    .footer-links a { color: #fff; text-decoration: none; margin: 0 20px; font-size: 1.1rem; }
+    /* 7. Massive Footer */
+    footer { 
+      background: #000; 
+      color: #fff; 
+      padding: 100px 20px; 
+      text-align: center; 
+    }
+    .footer-brand { font-size: 3rem; margin-bottom: 40px; }
   </style>
 </head>
 <body>
@@ -144,12 +145,12 @@
     <div class="logo">
       <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
     </div>
-    <span class="brand-name">INDIG-GROK</span>
+    <h1 class="brand-name">INDIG-GROK</h1>
     
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <div class="dropdown">
-        <a href="#" class="dropbtn">Shop</a>
+        <span class="dropbtn">Shop</span>
         <div class="dropdown-content">
           <a href="#">MEN</a>
           <a href="#">WOMEN</a>
@@ -162,8 +163,8 @@
     </nav>
   </header>
 
-  <main class="container">
-    <h1 class="section-title">Premium Men's Shirts</h1>
+  <div class="container">
+    <h2 class="section-title">Premium Men's Shirts</h2>
     <div class="products-grid">
       
       <div class="product-card">
@@ -171,7 +172,7 @@
         <div class="product-info">
           <h3>Indigo Hairline Stripes</h3>
           <span class="price">Rs 3,490</span>
-          <button class="add-btn">Add to Cart</button>
+          <button class="add-btn">Quick Add</button>
         </div>
       </div>
 
@@ -180,7 +181,7 @@
         <div class="product-info">
           <h3>White Dobby Textured</h3>
           <span class="price">Rs 3,490</span>
-          <button class="add-btn">Add to Cart</button>
+          <button class="add-btn">Quick Add</button>
         </div>
       </div>
 
@@ -189,21 +190,16 @@
         <div class="product-info">
           <h3>Black Self-Textured</h3>
           <span class="price">Rs 3,490</span>
-          <button class="add-btn">Add to Cart</button>
+          <button class="add-btn">Quick Add</button>
         </div>
       </div>
 
     </div>
-  </main>
+  </div>
 
   <footer>
     <div class="footer-brand">INDIG-GROK</div>
-    <div class="footer-links">
-      <a href="contact.html">Contact Us</a>
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-    </div>
-    <p style="margin-top: 40px; color: #555;">© 2026 INDIG-GROK Pakistan. All Rights Reserved.</p>
+    <p style="font-size: 1.2rem; color: #888;">© 2026 INDIG-GROK Pakistan. All Rights Reserved.</p>
   </footer>
 
 </body>
