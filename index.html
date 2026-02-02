@@ -3,162 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Indigo Hairline Stripes Formal Shirt – INDIG-GROK</title>
+  <title>INDIG-GROK – Premium Men's Shirts</title>
   <style>
+    /* 1. Global Reset - Removing all side gaps */
+    * { box-sizing: border-box; }
+    
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #111;
-      background: #e8e0d9 url('images/backgroundimage.jpg') repeat;  /* textured beige fallback + your image */
-      background-size: auto;
-      line-height: 1.6;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #fff; /* White background for a clean full-screen look */
+      overflow-x: hidden; /* Prevents unwanted side-scrolling */
     }
+
+    /* 2. Full-Width Header */
     header {
       background: #000;
       color: white;
-      padding: 15px 5%;
+      padding: 40px 5%; /* Padding using % for fluid width */
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 2000;
+    }
+
+    .brand-name {
+      font-size: 4.5rem;
+      font-weight: 900;
+      letter-spacing: 15px;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    /* 3. Navigation Bar */
+    .nav-links {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 60px;
+      margin-top: 25px;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* 4. Full-Screen Banner Section */
+    .hero-banner {
+      width: 100vw; /* 100% of the viewport width */
+      height: 70vh; /* 70% of the screen height */
+      background: url('images/backgroundimage.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
       align-items: center;
+      justify-content: center;
+    }
+
+    .hero-text {
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 50px 100px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+
+    /* 5. Edge-to-Edge Product Grid */
+    .full-container {
+      width: 100%;
+      padding: 60px 2%; /* Tiny margins on the sides */
+    }
+
+    .section-title {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+    }
+
+    .products-grid {
+      display: grid;
+      /* This makes the cards fill the entire width automatically */
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
+      gap: 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border: 1px solid #eee;
       position: relative;
     }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 30px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover { color: #ccc; }
-    .logo img {
-      max-width: 140px;
-      height: auto;
-    }
-    .product-container {
-      max-width: 1100px;
-      margin: 50px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      background: white;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-    .main-image {
+
+    .product-image { 
       width: 100%;
-      height: auto;
-      border-radius: 6px;
+      height: 700px; /* Taller images for premium feel */
     }
-    .product-info h1 {
-      font-size: 2.4rem;
-      margin: 0 0 15px;
+    .product-image img { width: 100%; height: 100%; object-fit: cover; }
+
+    .product-info { 
+      padding: 30px; 
+      text-align: center; 
+      background: #fff;
     }
-    .price {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #800080;  /* purple like your screenshot */
-      margin: 20px 0;
+
+    .price { font-size: 2rem; font-weight: bold; color: #000; }
+
+    .add-btn { 
+      background: #000; color: #fff; padding: 25px; border: none; 
+      width: 100%; cursor: pointer; font-size: 1.3rem; font-weight: bold; 
+      margin-top: 20px; text-transform: uppercase;
+      transition: 0.3s;
     }
-    .original-price {
-      font-size: 1.4rem;
-      color: #777;
-      text-decoration: line-through;
-      margin-left: 15px;
-    }
-    .add-to-cart {
-      background: #000;
-      color: white;
-      border: none;
-      padding: 16px 40px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 0;  /* square like screenshot buttons */
-      margin-top: 30px;
-      width: 100%;
-    }
-    .add-to-cart:hover { background: #222; }
-    .description {
-      margin-top: 40px;
-      border-top: 1px solid #ddd;
-      padding-top: 30px;
-    }
+    .add-btn:hover { background: #333; }
+
+    /* 6. Massive Full-Width Footer */
     footer {
       background: #000;
       color: white;
+      padding: 100px 5%;
       text-align: center;
-      padding: 30px;
-      margin-top: 80px;
-      font-size: 0.9rem;
-    }
-    @media (max-width: 900px) {
-      .product-container { grid-template-columns: 1fr; }
+      width: 100%;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <nav>
-      <ul>
-        <li><a href="/">HOME</a></li>
-        <li><a href="/">SHOP</a></li>
-        <li><a href="/">CONTACT US</a></li>
-      </ul>
+    <div class="brand-name">INDIG-GROK</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">Shop Men</a>
+      <a href="#">Shop Women</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <div class="logo">
-      <img src="images/logo.png" alt="INDIG-GROK">
-    </div>
   </header>
 
-  <div class="product-container">
-    <div>
-      <img src="images/product1.jpg" alt="Indigo Hairline Stripes Formal Shirt" class="main-image">
+  <section class="hero-banner">
+    <div class="hero-text">
+      <h2 style="font-size: 4rem; margin: 0;">NEW COLLECTION</h2>
+      <p style="font-size: 1.5rem;">The Gold Standard of Premium Cotton</p>
     </div>
+  </section>
 
-    <div class="product-info">
-      <h1>Indigo Hairline Stripes</h1>
-      <div class="price">
-        Rs 3,490 <span class="original-price">Rs 4,490</span>
+  <div class="full-container">
+    <h2 class="section-title">Featured Products</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <div class="product-image"><img src="images/product1.jpg" alt="Shirt 1"></div>
+        <div class="product-info">
+          <h3>Indigo Hairline Stripes</h3>
+          <span class="price">Rs 3,490</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
       </div>
 
-      <div>
-        <label for="size">Size</label>
-        <select id="size">
-          <option>S</option>
-          <option>M</option>
-          <option>L</option>
-          <option>XL</option>
-          <option>XXL</option>
-        </select>
+      <div class="product-card">
+        <div class="product-image"><img src="images/product2.jpg" alt="Shirt 2"></div>
+        <div class="product-info">
+          <h3>White Dobby Textured</h3>
+          <span class="price">Rs 3,490</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
       </div>
 
-      <button class="add-to-cart">QUICK ADD</button>
-
-      <div class="description">
-        <h2>Product Details</h2>
-        <p>Refined sophistication in subtle indigo hairline stripes. Regular fit formal shirt crafted for timeless elegance and comfort.</p>
-        <ul>
-          <li>Premium cotton blend</li>
-          <li>Subtle indigo stripes</li>
-          <li>Structured collar</li>
-          <li>Easy-care fabric</li>
-        </ul>
+      <div class="product-card">
+        <div class="product-image"><img src="images/product3.jpg" alt="Shirt 3"></div>
+        <div class="product-info">
+          <h3>Black Self-Textured</h3>
+          <span class="price">Rs 3,490</span>
+          <button class="add-btn">Add to Cart</button>
+        </div>
       </div>
+
     </div>
   </div>
 
   <footer>
-    <p>INDIG-GROK</p>
-    <p>© 2026 INDIG-GROK Pakistan. All Rights Reserved.</p>
+    <div style="font-size: 3rem; letter-spacing: 10px;">INDIG-GROK</div>
+    <p style="margin-top: 20px; opacity: 0.6;">© 2026 INDIG-GROK Pakistan. All Rights Reserved.</p>
   </footer>
 
 </body>
