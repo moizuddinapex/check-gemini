@@ -6,6 +6,19 @@
   <title>INDIG-GROK – Premium Men's Shirts</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+   /* This is the 'Compact Mode' for the header */
+header.shrink {
+  padding: 10px 20px !important; /* Forces the header to become thinner */
+  font-size: 1.5rem !important;   /* Makes the 'INDIG-GROK' text smaller */
+}
+
+/* This shrinks the logo image at the same time */
+header.shrink + .logo img, 
+.shrink-logo img { 
+  height: 40px !important; 
+}
+
+    
     body {
       margin: 0;
       padding: 0;
@@ -26,6 +39,7 @@ header {
   font-size: 2.2rem;
   font-weight: bold;
   letter-spacing: 5px;
+  transition: all 0.4s ease; /* Makes the shrink smooth */
   
   /* The Sticky Magic */
   position: fixed; /* Use fixed to stay pinned to the screen */
@@ -79,6 +93,7 @@ header {
   height: 60px; /* Slightly smaller for a cleaner sticky look */
   width: auto;
   filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5)); /* Adds depth */
+  transition: all 0.4s ease;
 }
       .container {
   max-width: 1200px;
@@ -303,6 +318,21 @@ header {
       © 2026 INDIG-GROK Pakistan. All rights reserved.
     </p>
   </footer>
+
+  <script>
+  window.onscroll = function() {
+    // Select the header
+    const header = document.querySelector('header');
+    
+    // If we scroll down more than 50px, add the 'shrink' class
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      header.classList.add('shrink');
+    } else {
+      // If we are at the top, remove it
+      header.classList.remove('shrink');
+    }
+  };
+</script>
 
 </body>
 </html>
