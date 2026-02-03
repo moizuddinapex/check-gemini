@@ -4,97 +4,156 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us – INDIG-GROK</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #f9f9f9; color: #111; }
-    header { background: #000; color: white; padding: 20px; text-align: center; position: relative; }
-    .logo { position: absolute; top: 15px; left: 20px; }
-    .logo img { max-width: 80px; }
-    
-    .contact-container {
-      max-width: 800px;
-      margin: 50px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: url('images/backgroundimage.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #111;
+      min-height: 100vh;
     }
-    h1 { text-align: center; font-size: 2rem; margin-bottom: 30px; }
-    
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-    
-    .info-section h3 { margin-top: 0; }
-    .info-item { margin-bottom: 20px; }
-    .info-item p { color: #666; margin: 5px 0; }
 
-    .form-section input, .form-section textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    .submit-btn {
+    /* Reuse Sticky Header Styles */
+    header {
       background: #000;
       color: white;
-      padding: 15px 30px;
-      border: none;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      top: 0;
       width: 100%;
-      cursor: pointer;
+      z-index: 2000;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 10px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* Glass Container for the Form */
+    .contact-container {
+      max-width: 600px;
+      margin: 150px auto 50px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
       font-weight: bold;
       letter-spacing: 1px;
     }
-    .submit-btn:hover { background: #333; }
 
-    footer { background: #000; color: #888; text-align: center; padding: 20px; margin-top: 50px; font-size: 0.8rem; }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgba(0,0,0,0.1);
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 5px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
 
-    @media (max-width: 600px) {
-      .contact-grid { grid-template-columns: 1fr; }
+    textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background: #000;
+      color: #fff;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+      background: #333;
+    }
+
+    .contact-info {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+      color: #111;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></div>
-    INDIG-GROK
+    <div style="font-size: 1.8rem; letter-spacing: 5px; font-weight: bold;">INDIG-GROK</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Shop</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
   </header>
 
   <div class="contact-container">
-    <h1>Contact Us</h1>
-    
-    <div class="contact-grid">
-      <div class="info-section">
-        <div class="info-item">
-          <h3>Customer Support</h3>
-          <p>Email: support@indig-grok.com</p>
-          <p>WhatsApp: +92 300 1234567</p>
-        </div>
-        <div class="info-item">
-          <h3>Operating Hours</h3>
-          <p>Monday - Saturday</p>
-          <p>10:00 AM - 8:00 PM (PKT)</p>
-        </div>
-        <div class="info-item">
-          <h3>Head Office</h3>
-          <p>Karachi, Pakistan</p>
-        </div>
+    <h1>Get in Touch</h1>
+    <form action="#">
+      <div class="form-group">
+        <label>FULL NAME</label>
+        <input type="text" placeholder="Your Name" required>
       </div>
+      <div class="form-group">
+        <label>EMAIL ADDRESS</label>
+        <input type="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label>MESSAGE</label>
+        <textarea placeholder="How can we help you?"></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
 
-      <div class="form-section">
-        <form action="mailto:support@indig-grok.com" method="post" enctype="text/plain">
-          <input type="text" name="Name" placeholder="Your Name" required>
-          <input type="email" name="Email" placeholder="Your Email" required>
-          <textarea name="Message" rows="5" placeholder="How can we help you?" required></textarea>
-          <button type="submit" class="submit-btn">SEND MESSAGE</button>
-        </form>
-      </div>
+    <div class="contact-info">
+      <p><i class="fa-solid fa-envelope"></i> support@indig-grok.com</p>
+      <p><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</p>
     </div>
   </div>
-
-  <footer>
-    © 2026 INDIG-GROK Pakistan. All Rights Reserved.
-  </footer>
 
 </body>
 </html>
