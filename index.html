@@ -121,14 +121,16 @@ header {
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 25px;
     }
-    .product-card {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      transition: 0.3s;
-    }
+     /* 1. The Main Card */
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Forces items to stack vertically */
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
     .product-card:hover { transform: translateY(-5px); }
     .product-image {
       height: 380px;
@@ -184,10 +186,14 @@ header {
       display: inline-block;
       margin: 15px 0 5px;
     }
-    .product-info { padding: 15px; }
+    .product-info { padding: 20px; }
     .price { font-size: 1.4rem; font-weight: bold; color: #4b0082; }
     .original { text-decoration: line-through; color: #777; margin-left: 10px; font-size: 0.9rem; }
-    
+     { text-align: center;
+  background: white; /* Ensures text is visible */
+  z-index: 5; /* Keeps text above any background blurs */
+}
+     
     .add-btn {
       background: #000;
       color: white;
@@ -333,17 +339,20 @@ header {
 </div>
 
       <div class="product-card">
-  <a href="product-black.html" style="text-decoration: none; color: inherit;">
-    
-    <div class="product-image">
-      <img src="images/product3.jpg" alt="Black Self-Textured">
-    </div>
-    
-    <div class="product-info">
-      <div class="brand-label">INDIG-GROK</div>
-      <h3>Black Self-Textured</h3>
-      <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
-    </div>
+  <div class="product-image">
+    <img src="images/product1.1.jpg" class="img-secondary">
+    <img src="images/product1.jpg" class="img-primary">
+  </div>
+
+  <div class="product-info">
+    <p style="font-size: 12px; color: #666; margin-bottom: 5px;">DINERS</p>
+    <h3 style="margin: 0; font-size: 1.1rem;">Indigo Hairline Stripes</h3>
+    <p style="color: #4b0082; font-weight: bold; margin-top: 10px;">
+      <span style="text-decoration: line-through; color: #999; font-size: 0.9rem;">Rs 4,490</span> 
+      Rs 3,490
+    </p>
+  </div>
+
 
   </a>
 
