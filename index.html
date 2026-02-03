@@ -141,31 +141,35 @@ header {
     }
 
     .product-image {
-      position: relative;
-      width: 100%;
-      height: 400px; 
-      overflow: hidden;
-      background-color: #f7f7f7;
-    }
+  position: relative;
+  width: 100%;
+  /* 1. Add a specific height so the text stays below the image */
+  height: 350px; 
+  overflow: hidden;
+  background-color: #f7f7f7;
+  border-radius: 8px; /* Optional: keeps things looking clean */
+}
 
     .product-image img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: opacity 0.4s ease-in-out;
-    }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 2. Ensure the image doesn't look stretched */
+  object-fit: cover; 
+  transition: opacity 0.4s ease-in-out;
+}
 
-    .img-primary {
-      z-index: 2;
-      opacity: 1;
-    }
+    /* This makes the secondary image sit behind the first one */
+   .img-secondary {
+  z-index: 1;
 
-    .img-secondary {
-      z-index: 1;
-    }
+     /* This makes the primary image sit on top */
+.img-primary {
+  z-index: 2;
+  opacity: 1;
+}
 
     .product-card:hover .img-primary {
       opacity: 0;
