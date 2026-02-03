@@ -139,6 +139,38 @@ header {
       height: 100%;
       object-fit: cover;
     }
+
+    .product-image {
+      position: relative;
+      width: 100%;
+      height: 400px; 
+      overflow: hidden;
+      background-color: #f7f7f7;
+    }
+
+    .product-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    .img-primary {
+      z-index: 2;
+      opacity: 1;
+    }
+
+    .img-secondary {
+      z-index: 1;
+    }
+
+    .product-card:hover .img-primary {
+      opacity: 0;
+    }
+    
     .brand-label {
       background: #000;
       color: white;
@@ -255,16 +287,25 @@ header {
 
     <div class="products-grid">
 
-      <div class="product-card">
-  <a href="product-indigo.html" style="text-decoration: none; color: inherit;">
-    <div class="product-image">
-      <img src="images/product1.jpg" alt="Indigo Hairline Stripes">
-    </div>
-    <div class="product-info">
-      <div class="brand-label">INDIG-GROK</div>
-      <h3>Indigo Hairline Stripes</h3>
-      <span class="price">Rs 3,490</span>
-    </div>
+     <div class="product-card">
+  <div class="product-image">
+    <img src="images/product1.1.jpg" class="img-secondary" alt="Product Back View">
+    
+    <img src="images/product1.jpg" class="img-primary" alt="Product Front View">
+    
+    <span class="badge">SALE</span>
+  </div>
+
+  <div class="product-info">
+    <p class="brand">DINERS</p>
+    <h3 class="product-title">Indigo Hairline Stripes</h3>
+    <p class="price">
+      <span class="old-price">Rs 4,490</span>
+      <span class="current-price">Rs 3,490</span>
+    </p>
+  </div>
+</div>
+      
   </a>
   <button class="add-btn">Quick Add</button>
 </div>
