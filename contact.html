@@ -7,6 +7,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     
+   .toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: rgba(255, 255, 255, 0.2); /* Glass effect */
+  backdrop-filter: blur(10px);
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1000;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.toast.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein { from { bottom: 0; opacity: 0; } to { bottom: 30px; opacity: 1; } }
+@keyframes fadeout { from { bottom: 30px; opacity: 1; } to { bottom: 0; opacity: 0; } }
+    
+    
     .map-container {
   width: 100%;
   margin-top: 20px;
@@ -137,6 +164,10 @@
 </head>
 <body>
 
+ <div id="successToast" class="toast">
+  <span>✓</span> Message sent successfully!
+</div>
+  
   <header>
     <div style="font-size: 1.8rem; letter-spacing: 5px; font-weight: bold;">INDIG-GROK</div>
     <nav class="nav-links">
