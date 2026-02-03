@@ -15,18 +15,25 @@
       background: url('images/backgroundimage.jpg') no-repeat center center fixed;
       background-size: cover;
       min-height: 100vh;
+      padding-top: 160px;
     }
-    header {
+     /* Make the entire header stay at the top */
+header {
   background: #000;
   color: white;
-  padding: 30px 20px;
+  padding: 25px 20px;
   text-align: center;
   font-size: 2.2rem;
   font-weight: bold;
   letter-spacing: 5px;
-  position: relative;
+  
+  /* The Sticky Magic */
+  position: fixed; /* Use fixed to stay pinned to the screen */
+  top: 0;
   width: 100%;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 2000; /* High number to stay above everything else */
+  
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 /* Styling for the navigation line below the brand name */
@@ -57,19 +64,19 @@
 .dropdown:hover .dropbtn {
   color: #aaa;
 }
-    /* Logo - Top Left Corner */
-     .logo {
-  position: absolute;
+    /* Ensure the logo moves with the header */
+.logo {
+  position: fixed; /* Changed to fixed */
   top: 0;
   left: 30px;
-  z-index: 1001;
-  height: 120px; /* Adjust based on how far down you want it to hang */
+  z-index: 2001; /* Higher than header */
+  height: 100px; 
   display: flex;
   align-items: center;
 }
 
      .logo img {
-  height: 80px; /* This makes the logo large enough to be seen but fits the bar */
+  height: 60px; /* Slightly smaller for a cleaner sticky look */
   width: auto;
   filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5)); /* Adds depth */
 }
