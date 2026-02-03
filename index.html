@@ -66,15 +66,24 @@
       max-width: 120px;
       height: auto;
     }
-    .container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 30px;
-      /* Semi-transparent background to see the background image */
-      background: rgba(255, 255, 255, 0.88);
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
+      .container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  
+  /* 1. Low Opacity White (0.4 means 40% white) */
+  background: rgba(255, 255, 255, 0.4); 
+  
+  /* 2. The Blur Effect (Glassmorphism) */
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); /* For Safari support */
+  
+  /* 3. Aesthetic cleanups */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle white border */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+    
     h1 { text-align: center; font-size: 2.4rem; margin-bottom: 10px; }
     .description { text-align: center; font-size: 1.1rem; color: #444; max-width: 800px; margin: 0 auto 40px; }
     
