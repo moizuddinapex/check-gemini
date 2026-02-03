@@ -121,16 +121,14 @@ header {
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 25px;
     }
-     /* 1. The Main Card */
-.product-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column; /* Forces items to stack vertically */
-  transition: transform 0.3s ease;
-  margin-bottom: 20px;
-}
+    .product-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+    }
     .product-card:hover { transform: translateY(-5px); }
     .product-image {
       height: 380px;
@@ -141,42 +139,6 @@ header {
       height: 100%;
       object-fit: cover;
     }
-
-    .product-image {
-  position: relative;
-  width: 100%;
-  /* 1. Add a specific height so the text stays below the image */
-  height: 350px; 
-  overflow: hidden;
-  background-color: #f7f7f7;
-  border-radius: 8px; /* Optional: keeps things looking clean */
-}
-
-    .product-image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* 2. Ensure the image doesn't look stretched */
-  object-fit: cover; 
-  transition: opacity 0.4s ease-in-out;
-}
-
-    /* This makes the secondary image sit behind the first one */
-   .img-secondary {
-  z-index: 1;
-
-     /* This makes the primary image sit on top */
-.img-primary {
-  z-index: 2;
-  opacity: 1;
-}
-
-    .product-card:hover .img-primary {
-      opacity: 0;
-    }
-    
     .brand-label {
       background: #000;
       color: white;
@@ -186,14 +148,10 @@ header {
       display: inline-block;
       margin: 15px 0 5px;
     }
-    .product-info { padding: 20px; }
+    .product-info { padding: 15px; }
     .price { font-size: 1.4rem; font-weight: bold; color: #4b0082; }
     .original { text-decoration: line-through; color: #777; margin-left: 10px; font-size: 0.9rem; }
-     { text-align: center;
-  background: white; /* Ensures text is visible */
-  z-index: 5; /* Keeps text above any background blurs */
-}
-     
+    
     .add-btn {
       background: #000;
       color: white;
@@ -297,25 +255,16 @@ header {
 
     <div class="products-grid">
 
-     <div class="product-card">
-  <div class="product-image">
-    <img src="images/product1.1.jpg" class="img-secondary" alt="Product Back View">
-    
-    <img src="images/product1.jpg" class="img-primary" alt="Product Front View">
-    
-    <span class="badge">SALE</span>
-  </div>
-
-  <div class="product-info">
-    <p class="brand">DINERS</p>
-    <h3 class="product-title">Indigo Hairline Stripes</h3>
-    <p class="price">
-      <span class="old-price">Rs 4,490</span>
-      <span class="current-price">Rs 3,490</span>
-    </p>
-  </div>
-</div>
-      
+      <div class="product-card">
+  <a href="product-indigo.html" style="text-decoration: none; color: inherit;">
+    <div class="product-image">
+      <img src="images/product1.jpg" alt="Indigo Hairline Stripes">
+    </div>
+    <div class="product-info">
+      <div class="brand-label">INDIG-GROK</div>
+      <h3>Indigo Hairline Stripes</h3>
+      <span class="price">Rs 3,490</span>
+    </div>
   </a>
   <button class="add-btn">Quick Add</button>
 </div>
@@ -339,20 +288,17 @@ header {
 </div>
 
       <div class="product-card">
-  <div class="product-image">
-    <img src="images/product1.1.jpg" class="img-secondary">
-    <img src="images/product1.jpg" class="img-primary">
-  </div>
-
-  <div class="product-info">
-    <p style="font-size: 12px; color: #666; margin-bottom: 5px;">DINERS</p>
-    <h3 style="margin: 0; font-size: 1.1rem;">Indigo Hairline Stripes</h3>
-    <p style="color: #4b0082; font-weight: bold; margin-top: 10px;">
-      <span style="text-decoration: line-through; color: #999; font-size: 0.9rem;">Rs 4,490</span> 
-      Rs 3,490
-    </p>
-  </div>
-
+  <a href="product-black.html" style="text-decoration: none; color: inherit;">
+    
+    <div class="product-image">
+      <img src="images/product3.jpg" alt="Black Self-Textured">
+    </div>
+    
+    <div class="product-info">
+      <div class="brand-label">INDIG-GROK</div>
+      <h3>Black Self-Textured</h3>
+      <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
+    </div>
 
   </a>
 
