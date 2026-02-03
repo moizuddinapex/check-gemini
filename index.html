@@ -16,15 +16,36 @@
       min-height: 100vh;
     }
     header {
-      background: #000;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 2.2rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-      position: relative;
-    }
+  background: #000;
+  color: white;
+  padding: 30px 20px 20px 20px; /* Added padding to make space */
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+/* Styling for the navigation line below the brand name */
+.nav-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between the links */
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem; /* Smaller font for a premium look */
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #aaa; /* Changes color when you hover over it */
+}
     /* Logo - Top Left Corner */
     .logo {
       position: absolute;
@@ -109,7 +130,15 @@
     <img src="images/logo.png" alt="INDIG-GROK Logo">
   </div>
 
-  <header>INDIG-GROK</header>
+  <header>
+  INDIG-GROK
+  
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="index.html#products">SHOP</a>
+    <a href="contact.html">CONTACT US</a>
+  </div>
+</header>
 
   <div class="container">
     <h1>Premium Men's Shirts</h1>
