@@ -223,6 +223,7 @@ header {
     position: relative;
     height: 380px;
     overflow: hidden;
+    background: #f0f0f0;
 }
 
 .product-image img {
@@ -232,20 +233,20 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.4s ease;
 }
 
-/* Show first image */
+/* Default image visible */
 .product-image .main-img {
     opacity: 1;
 }
 
-/* Hide second image */
+/* Hover image hidden */
 .product-image .hover-img {
     opacity: 0;
 }
 
-/* On hover swap */
+/* Swap on hover */
 .product-card:hover .main-img {
     opacity: 0;
 }
@@ -253,6 +254,7 @@ header {
 .product-card:hover .hover-img {
     opacity: 1;
 }
+
 
 
     
@@ -297,9 +299,9 @@ header {
 
       <div class="product-card">
   <a href="product-indigo.html" style="text-decoration: none; color: inherit;">
-    <div class="product-image hover-image">
-    <img src="images/product1.jpg" alt="Indigo Hairline Stripes" class="main-img">
-    <img src="images/product1.1.jpg" alt="Hover Image" class="hover-img">
+    <div class="product-image">
+    <img src="images/product1.jpg" class="main-img">
+    <img src="images/product1.1.jpg" class="hover-img">
 </div>
 
     <div class="product-info">
