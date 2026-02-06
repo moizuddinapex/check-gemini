@@ -277,7 +277,38 @@ header {
   opacity: 1;
 }
 
-   
+/* Hover Image Effect like Diners */
+
+.hover-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+}
+
+/* Second image hidden by default */
+.hover-image .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+/* When hover -> show second image */
+.product-card:hover .hover-img {
+    opacity: 1;
+}
+
+.product-card:hover .main-img {
+    opacity: 0;
+}
+
+    
   </style>
 </head>
 <body>
@@ -319,9 +350,9 @@ header {
 
       <div class="product-card">
   <a href="product-indigo.html" style="text-decoration: none; color: inherit;">
-    <div class="product-image">
-  <img src="images/product1.jpg" class="img-main" alt="">
-  <img src="images/product1.1.jpg" class="img-hover" alt="">
+    <div class="product-image hover-image">
+    <img src="images/product1.jpg" class="main-img" alt="Indigo Hairline Stripes">
+    <img src="images/product1.1.jpg" class="hover-img" alt="Indigo Hairline Stripes Hover">
 </div>
     <div class="product-info">
       <div class="brand-label">INDIG-GROK</div>
