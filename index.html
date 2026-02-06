@@ -216,6 +216,45 @@ header {
   left: 0;
   width: 100%;
   height: 15px;
+ 
+  /* Hover Image Swap Effect */
+.hover-swap {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-swap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+/* Default image visible */
+.hover-swap .img-main {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Hover image hidden initially */
+.hover-swap .img-hover {
+  opacity: 0;
+  z-index: 2;
+}
+
+/* On hover → swap */
+.product-card:hover .img-main {
+  opacity: 0;
+}
+
+.product-card:hover .img-hover {
+  opacity: 1;
+}
+  
+   
   </style>
 </head>
 <body>
@@ -257,9 +296,10 @@ header {
 
       <div class="product-card">
   <a href="product-indigo.html" style="text-decoration: none; color: inherit;">
-    <div class="product-image">
-      <img src="images/product1.jpg" alt="Indigo Hairline Stripes">
-    </div>
+    <div class="product-image hover-swap">
+  <img src="images/product1.jpg" alt="Indigo Hairline Stripes" class="img-main">
+  <img src="images/product1.1.jpg" alt="Indigo Hairline Stripes Hover" class="img-hover">
+</div>
     <div class="product-info">
       <div class="brand-label">INDIG-GROK</div>
       <h3>Indigo Hairline Stripes</h3>
