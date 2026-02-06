@@ -131,13 +131,17 @@ header {
     }
     .product-card:hover { transform: translateY(-5px); }
     .product-image {
+      position: relative;
       height: 380px;
+      overflow: hidden;
       background: #f0f0f0;
-    }
     .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
     }
     .brand-label {
       background: #000;
@@ -233,27 +237,43 @@ header {
   transition: opacity 0.4s ease;
 }
 
-/* Default image visible */
-.hover-swap .img-main {
+/* === Image Hover Swap (Diners Style) === */
+.product-image {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+}
+
+.product-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+/* Default image */
+.img-main {
   opacity: 1;
   z-index: 1;
 }
 
-/* Hover image hidden initially */
-.hover-swap .img-hover {
+/* Hover image */
+.img-hover {
   opacity: 0;
   z-index: 2;
 }
 
-/* On hover → swap */
-.product-card:hover .img-main {
+/* Swap on hover */
+.product-image:hover .img-main {
   opacity: 0;
 }
 
-.product-card:hover .img-hover {
+.product-image:hover .img-hover {
   opacity: 1;
 }
-  
+
    
   </style>
 </head>
@@ -297,8 +317,8 @@ header {
       <div class="product-card">
   <a href="product-indigo.html" style="text-decoration: none; color: inherit;">
     <div class="product-image hover-swap">
-  <img src="images/product1.jpg" alt="Indigo Hairline Stripes" class="img-main">
-  <img src="images/product1.1.jpg" alt="Indigo Hairline Stripes Hover" class="img-hover">
+  <img src="images/product1.jpg" class="img-main" alt="Indigo Hairline Stripes">
+  <img src="images/product1.1.jpg" class="img-hover" alt="Indigo Hairline Stripes Hover">
 </div>
     <div class="product-info">
       <div class="brand-label">INDIG-GROK</div>
